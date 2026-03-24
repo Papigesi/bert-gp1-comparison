@@ -1,0 +1,7 @@
+aclImdb/
+__pycache__/
+checkpoints_bert/
+checkpoints_gpt1/
+bert_imdb_results/
+final_bert_imdb/
+final_gpt1_imdb/
