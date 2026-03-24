@@ -98,12 +98,12 @@ pip install -r requirements.txt
 
 ## Dataset
 
-This project expects the `aclImdb` dataset folder to exist in the repository root.  
-If needed, you can download the dataset from the official source:
+This project expects the extracted `aclImdb` folder to be placed in the repository root.  
+The dataset is not included in this repository and should be downloaded separately from the official source:
 
 - [Large Movie Review Dataset (IMDB)](https://ai.stanford.edu/~amaas/data/sentiment/)
 
-After extraction, you should have:
+After extraction, the folder structure should look like this:
 
 ```text
 aclImdb/
@@ -135,23 +135,31 @@ Official dataset notes (Large Movie Review Dataset v1.0):
   - `imdb.vocab`
   - `imdbEr.txt`
 
-For `.feat` format details, see [LIBSVM](http://www.csie.ntu.edu.tw/~cjlin/libsvm/).
+For `.feat` format details, see [LIBSVM](https://www.csie.ntu.edu.tw/~cjlin/libsvm/).
 
 ## Citation
 
-If you use this dataset in your work, please cite the ACL 2011 paper that introduced it:
+Please cite the original paper if you use this dataset in academic work:
 
 ```bibtex
-@InProceedings{maas-EtAl:2011:ACL-HLT2011,
-  author    = {Maas, Andrew L.  and  Daly, Raymond E.  and  Pham, Peter T.  and  Huang, Dan  and  Ng, Andrew Y.  and  Potts, Christopher},
-  title     = {Learning Word Vectors for Sentiment Analysis},
-  booktitle = {Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies},
-  month     = {June},
-  year      = {2011},
-  address   = {Portland, Oregon, USA},
-  publisher = {Association for Computational Linguistics},
-  pages     = {142--150},
-  url       = {http://www.aclweb.org/anthology/P11-1015}
+@inproceedings{maas-etal-2011-learning,
+    title = "Learning Word Vectors for Sentiment Analysis",
+    author = "Maas, Andrew L.  and
+      Daly, Raymond E.  and
+      Pham, Peter T.  and
+      Huang, Dan  and
+      Ng, Andrew Y.  and
+      Potts, Christopher",
+    editor = "Lin, Dekang  and
+      Matsumoto, Yuji  and
+      Mihalcea, Rada",
+    booktitle = "Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies",
+    month = jun,
+    year = "2011",
+    address = "Portland, Oregon, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/P11-1015/",
+    pages = "142--150"
 }
 ```
 
