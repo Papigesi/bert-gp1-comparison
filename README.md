@@ -116,6 +116,45 @@ aclImdb/
     neg/
 ```
 
+Official dataset notes (Large Movie Review Dataset v1.0):
+
+- The core labeled set contains **50,000** reviews:
+  - **25,000 train** and **25,000 test**
+  - Balanced sentiment labels (`pos`/`neg`)
+- There are **50,000 additional unlabeled** reviews for unsupervised learning (`train/unsup/`).
+- In the labeled sets:
+  - Negative review rating: `<= 4/10`
+  - Positive review rating: `>= 7/10`
+  - Neutral ratings are excluded from train/test labels.
+- Train and test sets are built from **disjoint movie sets**.
+- Review files follow the naming convention: `[id]_[rating].txt`.
+  - Example: `test/pos/200_8.txt` means id `200`, rating `8/10`, positive label.
+- URL files are included as `urls_[pos,neg,unsup].txt` (line number corresponds to review id).
+- Additional resources distributed with the dataset:
+  - `.feat` files (LIBSVM sparse feature format)
+  - `imdb.vocab`
+  - `imdbEr.txt`
+
+For `.feat` format details, see [LIBSVM](http://www.csie.ntu.edu.tw/~cjlin/libsvm/).
+
+## Citation
+
+If you use this dataset in your work, please cite the ACL 2011 paper that introduced it:
+
+```bibtex
+@InProceedings{maas-EtAl:2011:ACL-HLT2011,
+  author    = {Maas, Andrew L.  and  Daly, Raymond E.  and  Pham, Peter T.  and  Huang, Dan  and  Ng, Andrew Y.  and  Potts, Christopher},
+  title     = {Learning Word Vectors for Sentiment Analysis},
+  booktitle = {Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies},
+  month     = {June},
+  year      = {2011},
+  address   = {Portland, Oregon, USA},
+  publisher = {Association for Computational Linguistics},
+  pages     = {142--150},
+  url       = {http://www.aclweb.org/anthology/P11-1015}
+}
+```
+
 ## Usage
 
 Run training for each model from repository root:
@@ -179,4 +218,4 @@ From `requirements.txt`:
 ## License
 
 No license file is currently included in this repository.  
-Consider adding a license (for example MIT, Apache-2.0, or GPL-3.0) before public distribution.s
+Consider adding a license (for example MIT, Apache-2.0, or GPL-3.0) before public distribution.
