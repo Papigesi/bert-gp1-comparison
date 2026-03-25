@@ -222,8 +222,3 @@ From `requirements.txt`:
 - `pandas`
 - `scikit-learn`
 - `numpy`
-
-## License
-
-No license file is currently included in this repository.  
-Consider adding a license (for example MIT, Apache-2.0, or GPL-3.0) before public distribution.
